@@ -1,4 +1,8 @@
 
+/* =========================
+   VARIABLES
+========================= */
+
 :root {
     --bg: #080d19;
     --surface: #101a2d;
@@ -9,6 +13,7 @@
     --cyan: #65d6e8;
     --border: rgba(255,255,255,.09);
 }
+
 
 /* =========================
    GLOBAL
@@ -45,6 +50,7 @@ a {
 .section {
     padding: 110px 0;
 }
+
 
 /* =========================
    NAVBAR
@@ -112,6 +118,7 @@ nav .nav-contact {
     cursor: pointer;
 }
 
+
 /* =========================
    HERO SECTION
 ========================= */
@@ -122,6 +129,7 @@ nav .nav-contact {
     display: flex;
     align-items: center;
     overflow: hidden;
+
     background:
         radial-gradient(
             ellipse at 80% 40%,
@@ -247,38 +255,61 @@ nav .nav-contact {
     background: var(--blue);
 }
 
+
 /* =========================
    HERO VISUAL
 ========================= */
 
 .hero-visual {
-    width: 330px;
-    min-height: 410px;
+    width: 430px;
+    height: 410px;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+/* CIRCLE */
 
 .hero-circle {
     position: absolute;
-    width: 340px;
-    height: 340px;
+    width: 350px;
+    height: 350px;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
     border: 1px solid rgba(91,145,255,.18);
     border-radius: 50%;
     box-shadow: 0 0 100px rgba(91,145,255,.12);
+
     z-index: 0;
+    pointer-events: none;
 }
+
+/* MAIN CARD */
 
 .main-card {
     width: 330px;
-    position: relative;
+    max-width: 100%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
     z-index: 2;
+
     padding: 27px;
     border: 1px solid rgba(255,255,255,.13);
     border-radius: 15px;
+
     background: linear-gradient(145deg, #192a48, #0e1729);
     box-shadow: 0 25px 70px rgba(0,0,0,.35);
 }
@@ -294,11 +325,15 @@ nav .nav-contact {
 .visual-icon {
     width: 70px;
     height: 70px;
+
     display: grid;
     place-items: center;
+
     margin: 35px 0 20px;
+
     border-radius: 15px;
     background: rgba(91,145,255,.15);
+
     color: var(--blue);
     font-size: 40px;
 }
@@ -308,24 +343,19 @@ nav .nav-contact {
     font-size: 22px;
 }
 
-.main-card p,
-.about-content p,
-.skill-card > p:not(.card-label),
-.project-info > p:not(.card-label) {
+.main-card p {
     color: var(--muted);
     font-size: 13px;
 }
 
-.visual-tags,
-.tag-list {
+.visual-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 7px;
     margin-top: 22px;
 }
 
-.visual-tags span,
-.tag-list span {
+.visual-tags span {
     padding: 5px 9px;
     border-radius: 4px;
     background: rgba(91,145,255,.1);
@@ -339,11 +369,15 @@ nav .nav-contact {
 .floating-card {
     position: absolute;
     z-index: 3;
+
     padding: 12px 15px;
+
     border: 1px solid var(--border);
     border-radius: 8px;
+
     background: #17243b;
     box-shadow: 0 12px 30px rgba(0,0,0,.3);
+
     font-size: 11px;
     white-space: nowrap;
 }
@@ -353,15 +387,20 @@ nav .nav-contact {
     margin-right: 7px;
 }
 
+/* DATA DASHBOARD */
+
 .float-one {
-    top: 15px;
-    right: -90px;
+    top: 45px;
+    right: 0;
 }
 
+/* SMART AUTOMATION */
+
 .float-two {
-    bottom: 15px;
-    left: -90px;
+    bottom: 45px;
+    left: 0;
 }
+
 
 /* =========================
    SECTION HEADING
@@ -380,6 +419,7 @@ nav .nav-contact {
     margin-top: 14px;
     font-size: 14px;
 }
+
 
 /* =========================
    ABOUT
@@ -413,6 +453,8 @@ nav .nav-contact {
 }
 
 .about-content p {
+    color: var(--muted);
+    font-size: 13px;
     margin-bottom: 15px;
 }
 
@@ -438,12 +480,12 @@ nav .nav-contact {
     font-size: 12px;
 }
 
+
 /* =========================
    SKILLS
 ========================= */
 
-.skills-grid,
-.projects-grid {
+.skills-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -466,12 +508,16 @@ nav .nav-contact {
 .skill-icon {
     width: 55px;
     height: 55px;
+
     display: grid;
     place-items: center;
+
     border-radius: 10px;
     background: rgba(91,145,255,.13);
+
     color: var(--blue);
     font-size: 25px;
+
     margin-bottom: 27px;
 }
 
@@ -490,10 +536,27 @@ nav .nav-contact {
     margin-bottom: 12px;
 }
 
+.skill-card > p:not(.card-label) {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 22px;
+}
+
 .tag-list span {
+    padding: 5px 9px;
+    border-radius: 4px;
     background: #1b2b46;
     color: #b7c9e9;
+    font-size: 9px;
+    font-weight: 700;
 }
+
 
 /* =========================
    PROJECTS
@@ -502,6 +565,12 @@ nav .nav-contact {
 .projects {
     background: #0c1424;
     border-top: 1px solid var(--border);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
 .project-card {
@@ -638,6 +707,11 @@ nav .nav-contact {
     padding: 24px;
 }
 
+.project-info > p:not(.card-label) {
+    color: var(--muted);
+    font-size: 13px;
+}
+
 .project-link {
     display: inline-block;
     margin-top: 20px;
@@ -646,6 +720,7 @@ nav .nav-contact {
     letter-spacing: 1px;
     font-weight: 700;
 }
+
 
 /* =========================
    CONTACT
@@ -659,8 +734,10 @@ nav .nav-contact {
     position: relative;
     overflow: hidden;
     padding: 75px;
+
     border: 1px solid var(--border);
     border-radius: 15px;
+
     background:
         radial-gradient(
             circle at 90% 20%,
@@ -685,13 +762,16 @@ nav .nav-contact {
     position: absolute;
     right: -10px;
     bottom: -25px;
+
     color: rgba(255,255,255,.035);
     font-family: 'Space Grotesk', sans-serif;
     font-size: 70px;
     font-weight: 700;
     white-space: nowrap;
+
     pointer-events: none;
 }
+
 
 /* =========================
    FOOTER
@@ -719,6 +799,7 @@ nav .nav-contact {
     letter-spacing: 1px;
 }
 
+
 /* =========================
    TABLET
 ========================= */
@@ -730,7 +811,7 @@ nav .nav-contact {
     }
 
     .hero-visual {
-        min-height: 380px;
+        margin: 20px auto 0;
     }
 
     .about-layout {
@@ -745,7 +826,9 @@ nav .nav-contact {
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
 }
+
 
 /* =========================
    MOBILE
@@ -772,9 +855,11 @@ nav .nav-contact {
         left: 0;
         width: 100%;
         padding: 22px 5%;
+
         flex-direction: column;
         align-items: stretch;
         gap: 20px;
+
         background: #101a2d;
         border-bottom: 1px solid var(--border);
     }
@@ -805,13 +890,13 @@ nav .nav-contact {
         font-size: 8px;
     }
 
+    /* MOBILE HERO VISUAL */
+
     .hero-visual {
-        width: 300px;
-        min-height: 350px;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        width: 330px;
+        height: 360px;
+        max-width: 100%;
+        margin: 0 auto;
     }
 
     .main-card {
@@ -826,12 +911,12 @@ nav .nav-contact {
 
     .float-one {
         top: 15px;
-        right: -15px;
+        right: 0;
     }
 
     .float-two {
         bottom: 15px;
-        left: -15px;
+        left: 0;
     }
 
     .about-layout {
@@ -860,4 +945,5 @@ nav .nav-contact {
         flex-direction: column;
         text-align: center;
     }
+
 }
