@@ -226,11 +226,14 @@ nav .nav-contact {
 }
 
 .hero-visual {
-    min-height: 410px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+    width:330px;
+    min-height:410px;
+    margin:0 auto;
+    display:flex;
+    justify-content:center;
+    align-item:center;
+    position:relative;
+    padding:0;
 }
 
 .hero-circle {
@@ -317,14 +320,16 @@ nav .nav-contact {
 }
 
 .float-one {
-    Top:10px;
-    right: -20px;
+    position:absolute;
+    Top:15px;
+    right: -90px;
     z-index:3;
 }
 
 .float-two {
-    bottom: 0;
-    left: -20px;
+    position:absolute;
+    bottom: 15px;
+    left: -90px;
     z-index: 3;
 }
 
@@ -728,6 +733,7 @@ nav .nav-contact {
     }
 
     .hero-visual {
+        width:300px;
         min-height: 330px;
         display: high;
         justify-content: center;
@@ -737,7 +743,7 @@ nav .nav-contact {
     }
 
     .main-card {
-        width: min(300px, 90%);
+        width: 300px;
         padding: 22px;
     }
 
@@ -747,13 +753,11 @@ nav .nav-contact {
     }
 
     .float-one {
-        right: -5px;
-        top: 30px;
+        right: -15px;
     }
 
     .float-two {
-        left: -5px;
-        bottom: 35px;
+        left: -15px;
     }
 
     .about-layout {
