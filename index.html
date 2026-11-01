@@ -1,17 +1,253 @@
-<header class="header">
-        HEADER
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal portfolio - Excel Dashboard, Data Analysis, Automation and Web Development.">
+    <title>My Portfolio | Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container nav-content">
+            <a href="#home" class="logo">MY<span>PORTFOLIO.</span></a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+                ☰
+            </button>
+
+            <nav id="navMenu">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact" class="nav-contact">Contact Me ↗</a>
+            </nav>
+        </div>
     </header>
 
-    <section class="hero">
-        <h1>INI HERO SECTION</h1>
-        <p>Ini adalah area utama website.</p>
-    </section>
+    <main>
+        <section class="hero" id="home">
+            <div class="container hero-layout">
+                <div class="hero-text">
+                    <div class="status">
+                        <span class="status-dot"></span>
+                        AVAILABLE FOR OPPORTUNITIES
+                    </div>
 
-    <section class="about">
-        <h2>ABOUT ME</h2>
-        <p>Ini bagian tentang saya.</p>
-    </section>
+                    <p class="eyebrow">HELLO, WELCOME TO MY PORTFOLIO</p>
+
+                    <h1>Turning Data Into <span>Insights.</span></h1>
+
+                    <p class="hero-description">
+                        Hi, I'm <strong>Your Name</strong>. I enjoy building
+                        dashboards, automating workflows, and creating
+                        digital solutions that make work easier.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">Explore My Work ↗</a>
+                        <a href="#contact" class="btn btn-outline">Contact Me</a>
+                    </div>
+
+                    <div class="hero-social">
+                        <span>BASED IN INDONESIA</span>
+                        <span class="social-line"></span>
+                        <span>DATA · AUTOMATION · WEB</span>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="visual-card main-card">
+                        <div class="card-top">
+                            <span>MY WORKSPACE</span>
+                            <span class="live-dot"></span>
+                        </div>
+                        <div class="visual-icon">⌘</div>
+                        <h3>Think. Analyze. Create.</h3>
+                        <p>Building smarter ways to work with technology.</p>
+                        <div class="visual-tags">
+                            <span>EXCEL</span>
+                            <span>DATA</span>
+                            <span>AUTOMATION</span>
+                        </div>
+                    </div>
+                    <div class="floating-card float-one">
+                        <span>▦</span> Data Dashboard
+                    </div>
+                    <div class="floating-card float-two">
+                        <span>⌁</span> Smart Automation
+                    </div>
+                    <div class="hero-circle"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about section" id="about">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">01 — ABOUT ME</p>
+                    <h2>A little bit <span>about me.</span></h2>
+                </div>
+
+                <div class="about-layout">
+                    <div class="about-number">01</div>
+                    <div class="about-content">
+                        <h3>Passionate about data, productivity, and technology.</h3>
+                        <p>
+                            I am someone who enjoys solving problems through
+                            data and technology. I work with Microsoft Excel
+                            to organize information, build performance
+                            dashboards, and simplify repetitive tasks.
+                        </p>
+                        <p>
+                            I am also exploring web development to turn ideas
+                            into useful digital experiences. I believe that
+                            good technology should make complex work simpler.
+                        </p>
+                    </div>
+                    <div class="about-highlight">
+                        <span class="highlight-symbol">✳</span>
+                        <h3>Always learning.</h3>
+                        <p>Always improving. Always building something useful.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills section" id="skills">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">02 — WHAT I DO</p>
+                    <h2>My <span>skills.</span></h2>
+                    <p class="section-subtitle">Tools and skills I use to turn ideas into practical solutions.</p>
+                </div>
+
+                <div class="skills-grid">
+                    <article class="skill-card">
+                        <div class="skill-icon">▦</div>
+                        <p class="card-label">01 / DATA</p>
+                        <h3>Excel & Data Analysis</h3>
+                        <p>Organizing data, creating formulas, reports, and interactive dashboards.</p>
+                        <div class="tag-list">
+                            <span>Excel</span><span>Pivot Table</span><span>Dashboard</span>
+                        </div>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-icon">⌘</div>
+                        <p class="card-label">02 / AUTOMATION</p>
+                        <h3>Workflow Automation</h3>
+                        <p>Improving repetitive work processes with formulas, VBA, and automation.</p>
+                        <div class="tag-list">
+                            <span>VBA</span><span>Formulas</span><span>Process</span>
+                        </div>
+                    </article>
+
+                    <article class="skill-card">
+                        <div class="skill-icon">〈〉</div>
+                        <p class="card-label">03 / DEVELOPMENT</p>
+                        <h3>Web Development</h3>
+                        <p>Building responsive websites with clean layouts and practical features.</p>
+                        <div class="tag-list">
+                            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects section" id="projects">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">03 — SELECTED WORK</p>
+                    <h2>Featured <span>projects.</span></h2>
+                    <p class="section-subtitle">A few examples of projects and solutions I enjoy creating.</p>
+                </div>
+
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="project-preview preview-one">
+                            <div class="mock-dashboard">
+                                <div class="mock-top"><span></span><span></span><span></span></div>
+                                <div class="mock-stats">
+                                    <i></i><i></i><i></i>
+                                </div>
+                                <div class="mock-chart">
+                                    <span style="height:35%"></span>
+                                    <span style="height:65%"></span>
+                                    <span style="height:48%"></span>
+                                    <span style="height:85%"></span>
+                                    <span style="height:58%"></span>
+                                    <span style="height:95%"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <p class="card-label">DATA & REPORTING</p>
+                            <h3>Performance Dashboard</h3>
+                            <p>Interactive dashboard to monitor performance, targets, and actual results.</p>
+                            <span class="project-link">EXCEL · DASHBOARD</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-preview preview-two">
+                            <div class="automation-symbol">⚙</div>
+                            <div class="automation-lines"></div>
+                        </div>
+                        <div class="project-info">
+                            <p class="card-label">PRODUCTIVITY</p>
+                            <h3>Excel Automation</h3>
+                            <p>Automating repetitive reporting tasks to reduce manual work and save time.</p>
+                            <span class="project-link">VBA · AUTOMATION</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-preview preview-three">
+                            <div class="browser-mock">
+                                <div class="browser-bar"></div>
+                                <div class="browser-content">
+                                    <span></span><span></span><i></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <p class="card-label">WEB DEVELOPMENT</p>
+                            <h3>Personal Website</h3>
+                            <p>A responsive personal website to present information, skills, and projects.</p>
+                            <span class="project-link">HTML · CSS · JAVASCRIPT</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact section" id="contact">
+            <div class="container contact-box">
+                <p class="eyebrow">04 — GET IN TOUCH</p>
+                <h2>Have an idea?<br><span>Let's build it.</span></h2>
+                <p>Feel free to contact me for collaboration, projects, or just to say hello.</p>
+                <a href="mailto:your@email.com" class="btn btn-primary">Send Me an Email ↗</a>
+                <div class="contact-decoration">LET'S CONNECT</div>
+            </div>
+        </section>
+    </main>
 
     <footer class="footer">
-        FOOTER
+        <div class="container footer-content">
+            <a href="#home" class="logo">MY<span>PORTFOLIO.</span></a>
+            <p>Designed & built with curiosity. © <span id="year"></span></p>
+            <a href="#home">BACK TO TOP ↑</a>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
