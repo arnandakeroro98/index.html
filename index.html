@@ -1,1 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio / Projects</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #0d1117;
+            color: #c9d1d9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .card {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            padding: 30px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+        h1 {
+            color: #58a6ff;
+            margin-bottom: 10px;
+            font-size: 1.8rem;
+        }
+        p {
+            color: #8b949e;
+            font-size: 1rem;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+        .btn {
+            background-color: #238636;
+            color: #ffffff;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+        .btn:hover {
+            background-color: #2ea043;
+        }
+        .status-box {
+            margin-top: 20px;
+            padding: 12px;
+            border-radius: 6px;
+            background-color: #21262d;
+            border: 1px dashed #484f58;
+            color: #7ee787;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
 
+    <div class="card">
+        <h1>Hello World! 🚀</h1>
+        <p>Website ini dibuat langsung dari GitHub Editor. Selamat datang di proyek perdanaku!</p>
+        
+        <button class="btn" onclick="tambahSemangat()">Klik untuk Tes JS</button>
+        
+        <div class="status-box" id="output">
+            Status: Siap Coding!
+        </div>
+    </div>
+
+    <script>
+        let hitung = 0;
+        function tambahSemangat() {
+            hitung++;
+            const output = document.getElementById('output');
+            output.innerText = `Tombol diklik ${hitung}x — Mantap, kodenya jalan! 🎉`;
+        }
+    </script>
+
+</body>
+</html>
