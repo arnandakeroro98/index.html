@@ -318,13 +318,13 @@ nav .nav-contact {
 }
 
 .float-one {
-    top: 65px;
-    right: -10px;
+    Top:55px;
+    right: 0;
 }
 
 .float-two {
-    bottom: 65px;
-    left: -15px;
+    bottom: 55px;
+    left: 0px;
 }
 
 .section-heading {
@@ -728,6 +728,11 @@ nav .nav-contact {
 
     .hero-visual {
         min-height: 330px;
+        display: high;
+        justify-content: center;
+        align-item: center;
+        Position: Relative;
+        Padding:20px;
     }
 
     .main-card {
