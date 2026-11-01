@@ -4,191 +4,381 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Photo Gallery</title>
+
+<title>My Portfolio | Personal Website</title>
 
 <style>
+/* =========================
+   1. GLOBAL STYLE
+========================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg: #0b1120;
+    --card: #131d30;
+    --blue: #38bdf8;
+    --white: #f8fafc;
+    --gray: #94a3b8;
 }
 
 body {
     font-family: Arial, sans-serif;
-    background: #0d1117;
-    color: white;
+    background: var(--bg);
+    color: var(--white);
+    line-height: 1.6;
 }
 
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =========================
+   2. NAVBAR
+========================= */
+
 header {
-    padding: 25px 8%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background: rgba(11,17,32,0.95);
+    border-bottom: 1px solid #263449;
+    backdrop-filter: blur(10px);
+}
+
+.navbar {
+    height: 75px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #161b22;
 }
 
 .logo {
-    color: #58a6ff;
     font-size: 22px;
     font-weight: bold;
 }
 
-nav a {
-    color: #ddd;
-    text-decoration: none;
-    margin-left: 20px;
+.logo span {
+    color: var(--blue);
 }
 
-nav a:hover {
-    color: #58a6ff;
-}
-
-.hero {
-    text-align: center;
-    padding: 90px 20px 60px;
-}
-
-.hero h1 {
-    font-size: 45px;
-    margin-bottom: 15px;
-}
-
-.hero h1 span {
-    color: #58a6ff;
-}
-
-.hero p {
-    color: #9da7b3;
-    line-height: 1.7;
-}
-
-.gallery-section {
-    padding: 30px 8% 80px;
-}
-
-.section-title {
-    margin-bottom: 25px;
-    font-size: 26px;
-}
-
-.filters {
+.nav-links {
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 30px;
+    gap: 30px;
+    list-style: none;
 }
 
-.filters button {
-    background: #21262d;
-    border: 1px solid #30363d;
+.nav-links a {
+    color: var(--gray);
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--blue);
+}
+
+.menu-btn {
+    display: none;
+    font-size: 26px;
+    background: none;
     color: white;
-    padding: 10px 20px;
-    border-radius: 20px;
+    border: none;
     cursor: pointer;
 }
 
-.filters button.active,
-.filters button:hover {
-    background: #238636;
+/* =========================
+   3. HERO SECTION
+========================= */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 75px;
 }
 
-.gallery {
+.hero-content {
+    max-width: 750px;
+}
+
+.hero-label {
+    color: var(--blue);
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 7vw, 72px);
+    line-height: 1.15;
+    margin: 20px 0;
+}
+
+.hero h1 span {
+    color: var(--blue);
+}
+
+.hero p {
+    color: var(--gray);
+    font-size: 18px;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--blue);
+    color: #08111e;
+    padding: 13px 25px;
+    border-radius: 7px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    opacity: 0.85;
+}
+
+.btn-outline {
+    border: 1px solid var(--blue);
+    color: var(--blue);
+    background: transparent;
+    margin-left: 10px;
+}
+
+/* =========================
+   4. SECTION GENERAL
+========================= */
+
+section:not(.hero) {
+    padding: 100px 0;
+}
+
+.section-label {
+    color: var(--blue);
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.section-title {
+    font-size: 36px;
+    margin: 10px 0 35px;
+}
+
+.section-title span {
+    color: var(--blue);
+}
+
+/* =========================
+   5. ABOUT
+========================= */
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-content p {
+    color: var(--gray);
+    margin-bottom: 15px;
+}
+
+.about-box {
+    background: var(--card);
+    border: 1px solid #263449;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.about-box h3 {
+    color: var(--blue);
+    margin-bottom: 15px;
+}
+
+/* =========================
+   6. SKILLS
+========================= */
+
+.skills-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
-.photo {
-    background: #161b22;
-    border-radius: 12px;
-    overflow: hidden;
-    cursor: pointer;
+.skill-card {
+    background: var(--card);
+    border: 1px solid #263449;
+    border-radius: 10px;
+    padding: 25px;
     transition: 0.3s;
 }
 
-.photo:hover {
+.skill-card:hover {
+    border-color: var(--blue);
     transform: translateY(-5px);
 }
 
-.photo img {
-    width: 100%;
-    height: 240px;
-    object-fit: cover;
-    display: block;
+.skill-card h3 {
+    margin-bottom: 10px;
+    color: var(--blue);
 }
 
-.photo-info {
-    padding: 15px;
+.skill-card p {
+    color: var(--gray);
+    font-size: 14px;
 }
 
-.photo-info h3 {
-    margin-bottom: 6px;
+/* =========================
+   7. PROJECTS
+========================= */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
-.photo-info p {
-    color: #8b949e;
+.project-card {
+    background: var(--card);
+    border: 1px solid #263449;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--blue);
+}
+
+.project-image {
+    height: 180px;
+    background: #1e293b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 55px;
+}
+
+.project-info {
+    padding: 22px;
+}
+
+.project-info h3 {
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    color: var(--gray);
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.project-tag {
+    display: inline-block;
+    font-size: 12px;
+    padding: 5px 10px;
+    background: #1e3a5f;
+    color: var(--blue);
+    border-radius: 20px;
+    margin: 3px;
+}
+
+/* =========================
+   8. CONTACT
+========================= */
+
+.contact-box {
+    background: var(--card);
+    border: 1px solid #263449;
+    padding: 45px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.contact-box p {
+    color: var(--gray);
+    margin: 15px 0 25px;
+}
+
+/* =========================
+   9. FOOTER
+========================= */
+
+footer {
+    border-top: 1px solid #263449;
+    padding: 25px;
+    text-align: center;
+    color: var(--gray);
     font-size: 13px;
 }
 
-footer {
-    background: #161b22;
-    color: #8b949e;
-    text-align: center;
-    padding: 25px;
-}
+/* =========================
+   10. RESPONSIVE
+========================= */
 
-/* Preview foto */
-.lightbox {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.92);
-    z-index: 10;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
+@media(max-width: 768px) {
 
-.lightbox img {
-    max-width: 90%;
-    max-height: 85vh;
-    object-fit: contain;
-}
-
-.lightbox.show {
-    display: flex;
-}
-
-.close {
-    position: absolute;
-    top: 25px;
-    right: 35px;
-    font-size: 40px;
-    cursor: pointer;
-}
-
-@media(max-width: 800px) {
-    .gallery {
-        grid-template-columns: repeat(2, 1fr);
+    .container {
+        width: 90%;
     }
-}
 
-@media(max-width: 550px) {
-    header {
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: #131d30;
         flex-direction: column;
-        gap: 18px;
+        padding: 25px;
+        gap: 20px;
     }
 
-    nav a {
-        margin: 0 8px;
+    .nav-links.active {
+        display: flex;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
     }
 
     .hero h1 {
-        font-size: 32px;
+        font-size: 43px;
     }
 
-    .gallery {
-        grid-template-columns: 1fr;
+    .section-title {
+        font-size: 29px;
+    }
+
+    .contact-box {
+        padding: 25px;
     }
 }
 </style>
@@ -196,120 +386,280 @@ footer {
 
 <body>
 
+<!-- NAVBAR -->
+
 <header>
-    <div class="logo">MY GALLERY.</div>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
-    </nav>
+    <div class="container navbar">
+
+        <div class="logo">
+            MY<span>PORTFOLIO.</span>
+        </div>
+
+        <button class="menu-btn" onclick="toggleMenu()">
+            ☰
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home" onclick="closeMenu()">Home</a></li>
+            <li><a href="#about" onclick="closeMenu()">About</a></li>
+            <li><a href="#skills" onclick="closeMenu()">Skills</a></li>
+            <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
+            <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+        </ul>
+
+    </div>
 </header>
 
-<section class="hero">
-    <h1>My <span>Photo Gallery</span></h1>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div class="hero-label">
+                WELCOME TO MY PORTFOLIO
+            </div>
+
+            <h1>
+                Hello, I'm<br>
+                <span>Your Name.</span>
+            </h1>
+
+            <p>
+                I am passionate about technology,
+                data visualization, automation,
+                and creating digital experiences.
+            </p>
+
+            <a href="#projects" class="btn">
+                Explore My Work
+            </a>
+
+            <a href="#about" class="btn btn-outline">
+                About Me
+            </a>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+    <div class="container">
+
+        <div class="section-label">GET TO KNOW ME</div>
+
+        <h2 class="section-title">
+            About <span>Me</span>
+        </h2>
+
+        <div class="about-content">
+
+            <div>
+                <p>
+                    Hello! My name is Your Name.
+                    Welcome to my personal portfolio.
+                </p>
+
+                <p>
+                    I enjoy learning new technologies,
+                    developing useful tools,
+                    analyzing data, and creating
+                    solutions that make work easier.
+                </p>
+
+                <p>
+                    This website is a collection of
+                    my projects, skills, and experiences.
+                </p>
+            </div>
+
+            <div class="about-box">
+                <h3>Personal Information</h3>
+                <p>Name: Your Name</p>
+                <p>Location: Indonesia</p>
+                <p>Interest: Technology & Data</p>
+                <p>Focus: Learning & Development</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- SKILLS -->
+
+<section id="skills">
+    <div class="container">
+
+        <div class="section-label">WHAT I CAN DO</div>
+
+        <h2 class="section-title">
+            My <span>Skills</span>
+        </h2>
+
+        <div class="skills-grid">
+
+            <div class="skill-card">
+                <h3>Excel & Data</h3>
+                <p>
+                    Data processing, Excel formulas,
+                    dashboards, and reporting.
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Web Development</h3>
+                <p>
+                    HTML, CSS, JavaScript,
+                    and website development.
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Automation</h3>
+                <p>
+                    Workflow improvement,
+                    VBA macros, and automation.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- PROJECTS -->
+
+<section id="projects">
+    <div class="container">
+
+        <div class="section-label">MY RECENT WORK</div>
+
+        <h2 class="section-title">
+            Featured <span>Projects</span>
+        </h2>
+
+        <div class="projects-grid">
+
+            <div class="project-card">
+
+                <div class="project-image">📊</div>
+
+                <div class="project-info">
+                    <h3>Excel Dashboard</h3>
+
+                    <p>
+                        Interactive dashboard for
+                        monitoring and data analysis.
+                    </p>
+
+                    <span class="project-tag">Excel</span>
+                    <span class="project-tag">Dashboard</span>
+                </div>
+
+            </div>
+
+            <div class="project-card">
+
+                <div class="project-image">⚙️</div>
+
+                <div class="project-info">
+                    <h3>Automation Project</h3>
+
+                    <p>
+                        Automating repetitive tasks
+                        to improve work efficiency.
+                    </p>
+
+                    <span class="project-tag">VBA</span>
+                    <span class="project-tag">Automation</span>
+                </div>
+
+            </div>
+
+            <div class="project-card">
+
+                <div class="project-image">🌐</div>
+
+                <div class="project-info">
+                    <h3>Personal Website</h3>
+
+                    <p>
+                        A personal website built
+                        using HTML, CSS, and JavaScript.
+                    </p>
+
+                    <span class="project-tag">HTML</span>
+                    <span class="project-tag">CSS</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+    <div class="container">
+
+        <div class="contact-box">
+
+            <div class="section-label">GET IN TOUCH</div>
+
+            <h2 class="section-title">
+                Let's <span>Connect</span>
+            </h2>
+
+            <p>
+                Interested in collaborating
+                or discussing a project?
+                Feel free to contact me.
+            </p>
+
+            <a href="mailto:your@email.com" class="btn">
+                Contact Me
+            </a>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
     <p>
-        A collection of my favorite moments.<br>
-        Every picture tells a story.
+        © 2026 Your Name. All Rights Reserved.
     </p>
-</section>
-
-<section class="gallery-section" id="gallery">
-
-    <h2 class="section-title">Explore My Photos</h2>
-
-    <div class="filters">
-        <button class="active" onclick="filterPhotos('all',this)">All</button>
-        <button onclick="filterPhotos('nature',this)">Nature</button>
-        <button onclick="filterPhotos('travel',this)">Travel</button>
-        <button onclick="filterPhotos('personal',this)">Personal</button>
-    </div>
-
-    <div class="gallery" id="galleryContainer">
-
-        <div class="photo" data-category="nature" onclick="openPhoto(this)">
-            <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=800" alt="Nature">
-            <div class="photo-info">
-                <h3>Beautiful Nature</h3>
-                <p>Nature Collection</p>
-            </div>
-        </div>
-
-        <div class="photo" data-category="travel" onclick="openPhoto(this)">
-            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800" alt="Travel">
-            <div class="photo-info">
-                <h3>Adventure</h3>
-                <p>Travel Collection</p>
-            </div>
-        </div>
-
-        <div class="photo" data-category="nature" onclick="openPhoto(this)">
-            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800" alt="Forest">
-            <div class="photo-info">
-                <h3>Into The Forest</h3>
-                <p>Nature Collection</p>
-            </div>
-        </div>
-
-        <div class="photo" data-category="travel" onclick="openPhoto(this)">
-            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800" alt="Mountain">
-            <div class="photo-info">
-                <h3>Mountain View</h3>
-                <p>Travel Collection</p>
-            </div>
-        </div>
-
-        <div class="photo" data-category="personal" onclick="openPhoto(this)">
-            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800" alt="Portrait">
-            <div class="photo-info">
-                <h3>Portrait</h3>
-                <p>Personal Collection</p>
-            </div>
-        </div>
-
-        <div class="photo" data-category="nature" onclick="openPhoto(this)">
-            <img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=800" alt="Sunrise">
-            <div class="photo-info">
-                <h3>Morning Light</h3>
-                <p>Nature Collection</p>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<div class="lightbox" id="lightbox" onclick="closePhoto()">
-    <span class="close">&times;</span>
-    <img id="lightboxImage" src="" alt="Photo preview">
-</div>
-
-<footer id="contact">
-    © 2026 My Photo Gallery. All Rights Reserved.
 </footer>
 
+
+<!-- JAVASCRIPT -->
+
 <script>
-function filterPhotos(category, button) {
-    document.querySelectorAll('.filters button').forEach(btn => {
-        btn.classList.remove('active');
-    });
 
-    button.classList.add('active');
-
-    document.querySelectorAll('.photo').forEach(photo => {
-        photo.style.display =
-            category === 'all' || photo.dataset.category === category
-            ? 'block' : 'none';
-    });
+function toggleMenu() {
+    document.getElementById("navLinks")
+        .classList.toggle("active");
 }
 
-function openPhoto(photo) {
-    const image = photo.querySelector('img');
-    document.getElementById('lightboxImage').src = image.src;
-    document.getElementById('lightbox').classList.add('show');
+function closeMenu() {
+    document.getElementById("navLinks")
+        .classList.remove("active");
 }
 
-function closePhoto() {
-    document.getElementById('lightbox').classList.remove('show');
-}
 </script>
 
 </body>
