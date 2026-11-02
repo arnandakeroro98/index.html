@@ -48,7 +48,7 @@ html {
 
 body {
   margin: 0;
-  background: var(--bg);
+  background: 0F0E0E;
   color: var(--ink);
   font-family: 'DM Sans', sans-serif;
   transition: background .3s, color .3s;
