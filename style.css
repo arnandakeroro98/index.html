@@ -48,12 +48,12 @@ html {
 
 body {
   margin: 0;
-  background: 0F0E0E;
+  background: #000000;
+  background-color: #000000;
   color: var(--ink);
   font-family: 'DM Sans', sans-serif;
   transition: background .3s, color .3s;
   overflow-x: hidden;
-  background-color:0F0E0E;
 }
 
 a {
