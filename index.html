@@ -1,110 +1,440 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Personal portfolio — Excel Dashboard, Data Analysis, Automation and Web Development.">
-  <title>Your Name — Designer & Developer</title>
+  <title>Your Name — Personal Portfolio</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
-  <header class="topbar wrap">
-    <a class="brand" href="#home"><span class="brand-mark">Y.</span><span>YOURNAME<span class="brand-dot">.</span></span></a>
-    <nav class="nav">
-      <a href="#about">About</a><a href="#work">Works</a><a href="#services">Services</a><a href="#contact">Contact</a>
-    </nav>
-    <div class="top-actions">
-      <button class="theme-toggle" id="themeToggle" aria-label="Change color theme"><span>◐</span> <span class="theme-label">Theme</span></button>
-      <a class="button button-dark button-small" href="#contact">Let's Talk <span>↗</span></a>
-    </div>
-  </header>
 
-  <main id="home" class="wrap">
-    <section class="intro-grid">
-      <aside class="profile-card panel">
-        <div class="profile-top"><span class="availability"><i></i> Available for Work</span><button class="dots" aria-label="More">•••</button></div>
-        <div class="avatar-wrap"><img class="avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&auto=format&fit=crop&q=85" alt="Profile portrait"></div>
-        <p class="eyebrow">HELLO, I'M</p>
-        <h1 class="profile-name">Your Name<span class="accent">.</span></h1>
-        <p class="muted profile-role">Data Analyst · Automation · Web Developer</p>
-        <p class="profile-copy">I turn complex data into clear insights and build digital experiences that make work simpler.</p>
-        <div class="profile-links"><a href="#contact">Get in touch <span>↗</span></a><a href="#" class="cv-link">Download CV <span>↓</span></a></div>
-        <div class="social-row"><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="GitHub">⌘</a><a href="#" aria-label="Instagram">◎</a><span>BASED IN INDONESIA</span></div>
-      </aside>
+<header class="topbar wrap">
+  <a class="brand" href="#home">
+    <span class="brand-mark">Y.</span>
+    <span>YOURNAME<span class="accent">.</span></span>
+  </a>
 
-      <section class="hero panel">
-        <div class="hero-meta"><span class="eyebrow">PERSONAL PORTFOLIO — 2026</span><span class="live-dot">● OPEN TO OPPORTUNITIES</span></div>
-        <div class="hero-content">
-          <p class="eyebrow">DATA · DESIGN · DIGITAL</p>
-          <h2>I build <span class="serif">smart</span><br>solutions & digital<br>experiences<span class="accent">.</span></h2>
-          <p class="hero-description">From interactive dashboards to workflow automation and modern websites — I make information useful, systems efficient, and ideas happen.</p>
-          <a class="round-link" href="#work"><span>Explore my work</span><b>↘</b></a>
-        </div>
-        <div class="hero-bottom"><span>SCROLL TO EXPLORE</span><span class="hero-line"></span><span>01 / 05</span></div>
-        <div class="hero-stamp">CREATIVE<br>THINKING<br><span>✳</span></div>
-      </section>
-    </section>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#work">Works</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <section class="stats-grid">
-      <div class="stat panel"><span class="eyebrow">FOCUS AREAS</span><strong>03<span>+</span></strong><p>Core disciplines</p></div>
-      <div class="stat panel"><span class="eyebrow">WHAT I BUILD</span><strong>∞</strong><p>Ideas into solutions</p></div>
-      <div class="stat stat-note panel"><span class="eyebrow">MY APPROACH</span><p>Curious by nature.<br><b>Practical by design.</b></p><span class="tiny-star">✳</span></div>
-    </section>
-
-    <section id="about" class="section-block">
-      <div class="section-heading"><div><span class="eyebrow">01 — A LITTLE INTRODUCTION</span><h2>Behind the <span class="serif">pixels.</span></h2></div><p class="section-aside">A little about who I am<br>and how I think.</p></div>
-      <div class="about-grid">
-        <div class="about-photo panel"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1000&auto=format&fit=crop&q=85" alt="Minimal creative workspace"><span class="photo-caption">WORKSPACE / CREATIVE PROCESS</span></div>
-        <div class="about-text"><span class="eyebrow">THE PERSON BEHIND THE WORK</span><h3>Making everyday work<br><span class="serif">work better.</span></h3><p>I'm someone who enjoys solving problems through data, technology, and thoughtful design. I like turning repetitive processes into efficient workflows, transforming raw information into dashboards, and building clean digital experiences.</p><p>My work sits at the intersection of analytical thinking and creativity — always focused on clarity, usefulness, and continuous improvement.</p><a class="text-link" href="#contact">More about me <span>↗</span></a></div>
-      </div>
-    </section>
-
-    <section class="section-block experience">
-      <div class="section-heading"><div><span class="eyebrow">02 — THE JOURNEY</span><h2>Experience & <span class="serif">learning.</span></h2></div><p class="section-aside">Every project is a chance<br>to learn something new.</p></div>
-      <div class="timeline panel">
-        <div class="timeline-item"><span class="timeline-date">2024 — NOW</span><div><h3>Data & Automation Projects</h3><p>Dashboard development · Excel automation · Reporting systems</p></div><span class="timeline-tag">CURRENT</span></div>
-        <div class="timeline-item"><span class="timeline-date">2022 — 2024</span><div><h3>Operations & Reporting</h3><p>Data processing · Performance monitoring · Process improvement</p></div><span class="timeline-tag">EXPERIENCE</span></div>
-        <div class="timeline-item"><span class="timeline-date">ALWAYS</span><div><h3>Independent Learning</h3><p>Web development · Data visualization · New technologies</p></div><span class="timeline-tag">ONGOING</span></div>
-      </div>
-    </section>
-
-    <section id="work" class="section-block">
-      <div class="section-heading"><div><span class="eyebrow">03 — SELECTED PROJECTS</span><h2>Work <span class="serif">highlights.</span></h2></div><a class="text-link" href="#contact">Have a project in mind? ↗</a></div>
-      <div class="project-grid">
-        <article class="project-card project-large"><div class="project-image dashboard-image"><div class="mock-dashboard"><div class="mock-top"><b>PERFORMANCE OVERVIEW</b><span>● LIVE DATA</span></div><div class="mock-kpis"><i><small>TOTAL PLAN</small><strong>248</strong></i><i><small>ACTUAL</small><strong>186</strong></i><i><small>ACHIEVEMENT</small><strong>75%</strong></i></div><div class="mock-chart"><span style="height:42%"></span><span style="height:70%"></span><span style="height:55%"></span><span style="height:88%"></span><span style="height:65%"></span><span style="height:96%"></span><span style="height:76%"></span></div></div></div><div class="project-info"><div><span class="eyebrow">01 / DATA VISUALIZATION</span><h3>Performance Dashboard</h3><p>Excel · Data Analysis · KPI Monitoring</p></div><a class="project-arrow" href="#contact">↗</a></div></article>
-        <article class="project-card"><div class="project-image automation-image"><div class="flow-card"><span>RAW DATA</span><b>↓</b><span>PROCESS</span><b>↓</b><span class="flow-final">AUTOMATED REPORT</span></div></div><div class="project-info"><div><span class="eyebrow">02 / WORKFLOW</span><h3>Excel Automation</h3><p>VBA · Formulas · Reporting</p></div><a class="project-arrow" href="#contact">↗</a></div></article>
-        <article class="project-card"><div class="project-image web-image"><div class="browser-mock"><div class="browser-dots">● ● ●</div><div class="browser-title">Less noise.<br><em>More clarity.</em></div><div class="browser-pill">DIGITAL EXPERIENCE ↗</div></div></div><div class="project-info"><div><span class="eyebrow">03 / WEB DESIGN</span><h3>Personal Website</h3><p>HTML · CSS · JavaScript</p></div><a class="project-arrow" href="#contact">↗</a></div></article>
-      </div>
-    </section>
-
-    <section id="services" class="section-block">
-      <div class="section-heading"><div><span class="eyebrow">04 — WHAT I CAN DO</span><h2>Services & <span class="serif">expertise.</span></h2></div><p class="section-aside">Thoughtful solutions<br>for real-world needs.</p></div>
-      <div class="services-grid">
-        <article class="service-card panel"><span class="service-number">01</span><div class="service-icon">▦</div><h3>Dashboard & Data Analysis</h3><p>Turn raw data into clear, actionable insights with structured reports and interactive dashboards.</p><div class="tags"><span>Excel</span><span>Power Query</span><span>Visualization</span></div></article>
-        <article class="service-card panel"><span class="service-number">02</span><div class="service-icon">⌘</div><h3>Workflow Automation</h3><p>Reduce repetitive tasks, improve accuracy, and build smarter processes using formulas and VBA.</p><div class="tags"><span>VBA</span><span>Automation</span><span>Optimization</span></div></article>
-        <article class="service-card panel"><span class="service-number">03</span><div class="service-icon">↗</div><h3>Website Development</h3><p>Create responsive, modern websites with a clean layout and a focus on user experience.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div></article>
-      </div>
-    </section>
-
-    <section class="section-block stack-section">
-      <div class="section-heading"><div><span class="eyebrow">05 — TOOLS OF THE TRADE</span><h2>My tech <span class="serif">stack.</span></h2></div><p class="section-aside">The tools I use to turn<br>ideas into reality.</p></div>
-      <div class="stack-panel panel"><span class="stack-label">DATA & PRODUCTIVITY</span><div class="stack-list"><span>Excel</span><span>Power Query</span><span>VBA</span><span>PowerPoint</span></div><span class="stack-label">WEB & DEVELOPMENT</span><div class="stack-list"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>GitHub</span></div></div>
-    </section>
-
-    <section class="quote-section panel"><span class="eyebrow">A THOUGHT I BELIEVE IN</span><blockquote>“Good design is not just how it looks. It's how <em>well it works.</em>”</blockquote><span class="quote-mark">✳</span></section>
-
-    <section id="contact" class="section-block contact-section">
-      <div class="contact-panel panel"><div><span class="eyebrow">HAVE SOMETHING IN MIND?</span><h2>Let's make<br>it <span class="serif">happen.</span></h2><p>Have a project, collaboration, or just want to say hello? My inbox is always open.</p><a class="button button-dark" href="mailto:hello@example.com">Start a conversation <span>↗</span></a></div><div class="contact-side"><span class="contact-orbit">✳</span><span class="eyebrow">GET IN TOUCH</span><a href="mailto:hello@example.com">hello@example.com ↗</a><span class="eyebrow social-label">FOLLOW ALONG</span><div class="contact-social"><a href="#">LinkedIn ↗</a><a href="#">GitHub ↗</a><a href="#">Instagram ↗</a></div></div></div>
-    </section>
-  </main>
-  <footer class="footer wrap"><a class="brand" href="#home"><span class="brand-mark">Y.</span><span>YOURNAME<span class="brand-dot">.</span></span></a><span>DESIGNED WITH INTENTION · © 2026</span><a href="#home">BACK TO TOP ↑</a></footer>
-  <div class="theme-menu" id="themeMenu" aria-label="Choose theme">
-    <button data-theme="silver">Silver Dawn</button><button data-theme="lavender">Lavender Stone</button><button data-theme="ocean">Ocean Breeze</button><button data-theme="midnight">Midnight Fade</button><button data-theme="charcoal">Charcoal Mist</button><button data-theme="forest">Forest Shadow</button>
+  <div class="top-actions">
+    <button id="themeToggle">◐ Theme</button>
+    <a class="button dark small" href="#contact">Let's Talk ↗</a>
   </div>
-  <script src="script.js"></script>
+</header>
+
+<main class="wrap" id="home">
+
+  <!-- HERO -->
+  <section class="intro-grid">
+
+    <aside class="profile-card panel">
+      <div class="profile-top">
+        <span class="availability"><i></i> Available for Work</span>
+        <span>•••</span>
+      </div>
+
+      <img class="avatar"
+        src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500"
+        alt="Profile">
+
+      <p class="eyebrow">HELLO, I'M</p>
+      <h1>Your Name<span class="accent">.</span></h1>
+
+      <p class="muted">Data Analyst · Automation · Web Developer</p>
+
+      <p class="profile-copy">
+        I turn complex data into clear insights and build digital
+        experiences that make work simpler.
+      </p>
+
+      <div class="profile-links">
+        <a href="#contact">Get in touch ↗</a>
+        <a href="#">Download CV ↓</a>
+      </div>
+
+      <div class="social-row">
+        <a href="#">in</a>
+        <a href="#">⌘</a>
+        <a href="#">◎</a>
+        <span>BASED IN INDONESIA</span>
+      </div>
+    </aside>
+
+    <section class="hero panel">
+      <div class="hero-meta">
+        <span class="eyebrow">PERSONAL PORTFOLIO — 2026</span>
+        <span class="live-dot">● OPEN TO OPPORTUNITIES</span>
+      </div>
+
+      <div class="hero-content">
+        <p class="eyebrow">DATA · DESIGN · DIGITAL</p>
+
+        <h2>
+          I build <em>smart</em><br>
+          solutions & digital<br>
+          experiences<span class="accent">.</span>
+        </h2>
+
+        <p class="hero-description">
+          From interactive dashboards to workflow automation and
+          modern websites — I make information useful, systems
+          efficient, and ideas happen.
+        </p>
+
+        <a class="round-link" href="#work">
+          Explore my work <b>↘</b>
+        </a>
+      </div>
+
+      <div class="hero-bottom">
+        <span>SCROLL TO EXPLORE</span>
+        <span class="hero-line"></span>
+        <span>01 / 05</span>
+      </div>
+
+      <div class="hero-stamp">
+        CREATIVE<br>THINKING<br><span>✳</span>
+      </div>
+    </section>
+
+  </section>
+
+  <!-- STATISTICS -->
+  <section class="stats-grid">
+    <div class="stat panel">
+      <span class="eyebrow">FOCUS AREAS</span>
+      <strong>03<span>+</span></strong>
+      <p>Core disciplines</p>
+    </div>
+
+    <div class="stat panel">
+      <span class="eyebrow">WHAT I BUILD</span>
+      <strong>∞</strong>
+      <p>Ideas into solutions</p>
+    </div>
+
+    <div class="stat stat-note panel">
+      <span class="eyebrow">MY APPROACH</span>
+      <p>Curious by nature.<br><b>Practical by design.</b></p>
+      <span class="tiny-star">✳</span>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section-block">
+    <div class="section-heading">
+      <div>
+        <span class="eyebrow">01 — A LITTLE INTRODUCTION</span>
+        <h2>Behind the <em>pixels.</em></h2>
+      </div>
+      <p class="section-aside">A little about who I am<br>and how I think.</p>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-photo panel">
+        <img
+          src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1000"
+          alt="Workspace">
+        <span class="photo-caption">WORKSPACE / CREATIVE PROCESS</span>
+      </div>
+
+      <div class="about-text">
+        <span class="eyebrow">THE PERSON BEHIND THE WORK</span>
+        <h3>Making everyday work<br><em>work better.</em></h3>
+
+        <p>
+          I'm someone who enjoys solving problems through data,
+          technology, and thoughtful design. I like turning repetitive
+          processes into efficient workflows, transforming raw
+          information into dashboards, and building clean digital
+          experiences.
+        </p>
+
+        <p>
+          My work sits at the intersection of analytical thinking
+          and creativity — always focused on clarity, usefulness,
+          and continuous improvement.
+        </p>
+
+        <a class="text-link" href="#contact">More about me ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section-block">
+    <div class="section-heading">
+      <div>
+        <span class="eyebrow">02 — THE JOURNEY</span>
+        <h2>Experience & <em>learning.</em></h2>
+      </div>
+      <p class="section-aside">Every project is a chance<br>to learn something new.</p>
+    </div>
+
+    <div class="timeline panel">
+      <div class="timeline-item">
+        <span class="timeline-date">2024 — NOW</span>
+        <div>
+          <h3>Data & Automation Projects</h3>
+          <p>Dashboard development · Excel automation · Reporting systems</p>
+        </div>
+        <span class="timeline-tag">CURRENT</span>
+      </div>
+
+      <div class="timeline-item">
+        <span class="timeline-date">2022 — 2024</span>
+        <div>
+          <h3>Operations & Reporting</h3>
+          <p>Data processing · Performance monitoring · Process improvement</p>
+        </div>
+        <span class="timeline-tag">EXPERIENCE</span>
+      </div>
+
+      <div class="timeline-item">
+        <span class="timeline-date">ALWAYS</span>
+        <div>
+          <h3>Independent Learning</h3>
+          <p>Web development · Data visualization · New technologies</p>
+        </div>
+        <span class="timeline-tag">ONGOING</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="work" class="section-block">
+    <div class="section-heading">
+      <div>
+        <span class="eyebrow">03 — SELECTED PROJECTS</span>
+        <h2>Work <em>highlights.</em></h2>
+      </div>
+      <a class="text-link" href="#contact">Have a project in mind? ↗</a>
+    </div>
+
+    <div class="project-grid">
+
+      <article class="project-card project-large">
+        <div class="project-image dashboard-image">
+          <div class="mock-dashboard">
+            <div class="mock-top">
+              <b>PERFORMANCE OVERVIEW</b>
+              <span>● LIVE DATA</span>
+            </div>
+
+            <div class="mock-kpis">
+              <i><small>TOTAL PLAN</small><strong>248</strong></i>
+              <i><small>ACTUAL</small><strong>186</strong></i>
+              <i><small>ACHIEVEMENT</small><strong>75%</strong></i>
+            </div>
+
+            <div class="mock-chart">
+              <span style="height:42%"></span>
+              <span style="height:70%"></span>
+              <span style="height:55%"></span>
+              <span style="height:88%"></span>
+              <span style="height:65%"></span>
+              <span style="height:96%"></span>
+              <span style="height:76%"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-info">
+          <div>
+            <span class="eyebrow">01 / DATA VISUALIZATION</span>
+            <h3>Performance Dashboard</h3>
+            <p>Excel · Data Analysis · KPI Monitoring</p>
+          </div>
+          <a class="project-arrow" href="#contact">↗</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-image automation-image">
+          <div class="flow-card">
+            <span>RAW DATA</span>
+            <b>↓</b>
+            <span>PROCESS</span>
+            <b>↓</b>
+            <span class="flow-final">AUTOMATED REPORT</span>
+          </div>
+        </div>
+
+        <div class="project-info">
+          <div>
+            <span class="eyebrow">02 / WORKFLOW</span>
+            <h3>Excel Automation</h3>
+            <p>VBA · Formulas · Reporting</p>
+          </div>
+          <a class="project-arrow" href="#contact">↗</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-image web-image">
+          <div class="browser-mock">
+            <div class="browser-dots">● ● ●</div>
+            <div class="browser-title">Less noise.<br><em>More clarity.</em></div>
+            <div class="browser-pill">DIGITAL EXPERIENCE ↗</div>
+          </div>
+        </div>
+
+        <div class="project-info">
+          <div>
+            <span class="eyebrow">03 / WEB DESIGN</span>
+            <h3>Personal Website</h3>
+            <p>HTML · CSS · JavaScript</p>
+          </div>
+          <a class="project-arrow" href="#contact">↗</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section-block">
+    <div class="section-heading">
+      <div>
+        <span class="eyebrow">04 — WHAT I CAN DO</span>
+        <h2>Services & <em>expertise.</em></h2>
+      </div>
+      <p class="section-aside">Thoughtful solutions<br>for real-world needs.</p>
+    </div>
+
+    <div class="services-grid">
+      <article class="service-card panel">
+        <span class="service-number">01</span>
+        <div class="service-icon">▦</div>
+        <h3>Dashboard & Data Analysis</h3>
+        <p>Turn raw data into clear, actionable insights with structured reports and interactive dashboards.</p>
+        <div class="tags">
+          <span>Excel</span><span>Power Query</span><span>Visualization</span>
+        </div>
+      </article>
+
+      <article class="service-card panel">
+        <span class="service-number">02</span>
+        <div class="service-icon">⌘</div>
+        <h3>Workflow Automation</h3>
+        <p>Reduce repetitive tasks, improve accuracy, and build smarter processes using formulas and VBA.</p>
+        <div class="tags">
+          <span>VBA</span><span>Automation</span><span>Optimization</span>
+        </div>
+      </article>
+
+      <article class="service-card panel">
+        <span class="service-number">03</span>
+        <div class="service-icon">↗</div>
+        <h3>Website Development</h3>
+        <p>Create responsive, modern websites with a clean layout and a focus on user experience.</p>
+        <div class="tags">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- TECH STACK -->
+  <section class="section-block">
+    <div class="section-heading">
+      <div>
+        <span class="eyebrow">05 — TOOLS OF THE TRADE</span>
+        <h2>My tech <em>stack.</em></h2>
+      </div>
+      <p class="section-aside">The tools I use to turn<br>ideas into reality.</p>
+    </div>
+
+    <div class="stack-panel panel">
+      <span class="stack-label">DATA & PRODUCTIVITY</span>
+      <div class="stack-list">
+        <span>Excel</span>
+        <span>Power Query</span>
+        <span>VBA</span>
+        <span>PowerPoint</span>
+      </div>
+
+      <span class="stack-label">WEB & DEVELOPMENT</span>
+      <div class="stack-list">
+        <span>HTML5</span>
+        <span>CSS3</span>
+        <span>JavaScript</span>
+        <span>GitHub</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <section class="quote-section panel">
+    <span class="eyebrow">A THOUGHT I BELIEVE IN</span>
+    <blockquote>
+      “Good design is not just how it looks.
+      It's how <em>well it works.</em>”
+    </blockquote>
+    <span class="quote-mark">✳</span>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section-block">
+    <div class="contact-panel panel">
+      <div>
+        <span class="eyebrow">HAVE SOMETHING IN MIND?</span>
+        <h2>Let's make<br>it <em>happen.</em></h2>
+        <p>
+          Have a project, collaboration, or just want to say hello?
+          My inbox is always open.
+        </p>
+        <a class="button dark" href="mailto:hello@example.com">
+          Start a conversation ↗
+        </a>
+      </div>
+
+      <div class="contact-side">
+        <span class="contact-orbit">✳</span>
+        <span class="eyebrow">GET IN TOUCH</span>
+        <a href="mailto:hello@example.com">hello@example.com ↗</a>
+
+        <span class="eyebrow social-label">FOLLOW ALONG</span>
+        <div class="contact-social">
+          <a href="#">LinkedIn ↗</a>
+          <a href="#">GitHub ↗</a>
+          <a href="#">Instagram ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer wrap">
+  <a class="brand" href="#home">
+    <span class="brand-mark">Y.</span>
+    <span>YOURNAME<span class="accent">.</span></span>
+  </a>
+  <span>DESIGNED WITH INTENTION · © 2026</span>
+  <a href="#home">BACK TO TOP ↑</a>
+</footer>
+
+<div class="theme-menu" id="themeMenu">
+  <button data-theme="silver">Silver Dawn</button>
+  <button data-theme="lavender">Lavender Stone</button>
+  <button data-theme="ocean">Ocean Breeze</button>
+  <button data-theme="midnight">Midnight Fade</button>
+  <button data-theme="charcoal">Charcoal Mist</button>
+  <button data-theme="forest">Forest Shadow</button>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
