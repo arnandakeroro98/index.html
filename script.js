@@ -36,3 +36,25 @@ document.addEventListener('click', event => {
     themeMenu.classList.remove('show');
   }
 });
+
+const slides = document.querySelectorAll(".slide");
+const dotsContainer = document.querySelector(".slider-dots");
+
+let currentSlide = 0;
+let autoSlide;
+
+slides.forEach((_, index) => {
+    const dot = document.createElement("span");
+
+    dot.addEventListener("click", () => {
+        showSlide(index);
+        restartAutoSlide();
+    });
+
+    dotsContainer.appendChild(dot);
+});
+
+const dots = dotsContainer.querySelectorAll("span");
+
+function showSlide(index) {
+    currentSlide = (index + slides.length) % slides.length;
