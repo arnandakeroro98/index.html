@@ -483,13 +483,15 @@ nav a:hover,
 }
 
 /* =========================================
-   PHOTO SLIDER
+   PHOTO SLIDER - 16:9 WIDE
 ========================================= */
 
 .photo-slider {
   position: relative;
-  width: 100%;
-  height: 220px;
+  width: calc(100% + 40px);
+  margin-left: -20px;
+  aspect-ratio: 16 / 9;
+  height: auto;
   overflow: hidden;
   border-radius: 7px;
   background: var(--soft);
@@ -497,6 +499,7 @@ nav a:hover,
 }
 
 .slides {
+  position: relative;
   width: 100%;
   height: 100%;
 }
@@ -1254,6 +1257,14 @@ nav a:hover,
     display: none;
   }
 
+  /* Slider tablet */
+  .photo-slider {
+    width: 100%;
+    margin-left: 0;
+    aspect-ratio: 16 / 9;
+    height: auto;
+  }
+
   .stats-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -1341,8 +1352,12 @@ nav a:hover,
     flex-wrap: wrap;
   }
 
+  /* Slider mobile */
   .photo-slider {
-    height: 190px;
+    width: 100%;
+    margin-left: 0;
+    aspect-ratio: 16 / 9;
+    height: auto;
   }
 
   .stats-grid {
